@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.springboot.config.dao.BillPaymentMapper">
+    <resultMap id="CashierMap" type="com.bjpowernode.springboot.service.bo.CashierBO">
+        <result column="user_created" jdbcType="BIGINT" property="cashierId"/>
+        <result column="cashier_name" jdbcType="INTEGER" property="cashierName"/>
+    </resultMap>
+
+    <select id="getCashierList" resultMap="CashierMap">
+        SELECT DISTINCT
+          user_created,
+          cashier_name
+        FROM bill_payment
+        WHERE hosp_id = #{hospId}
+        ORDER BY user_created DESC
+    </select>
+
+
+    
+
+</mapper>
