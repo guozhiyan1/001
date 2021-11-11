@@ -6,16 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="005-springboot-excel" />
+        <module name="006-springboot-excel" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="demo" target="1.8" />
+      <module name="005-springboot-excel" target="1.8" />
+      <module name="006-springboot-excel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="demo" options="-parameters" />
+      <module name="005-springboot-excel" options="-parameters" />
+      <module name="006-springboot-excel" options="-parameters" />
     </option>
   </component>
 </project>
